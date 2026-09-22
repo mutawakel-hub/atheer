@@ -1,749 +1,645 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>أثير | الدفع الرقمي، حيث لا يعمل الإنترنت</title>
-<meta name="description" content="أثير — منظومة يمنية تجعل الدفع الرقمي يعمل بدون إنترنت: بصمة، تقريب، بيب ✅ في أقل من ثانية. تُعرض في معرض بروج التقني SMART-EX 2026.">
-<meta property="og:title" content="أثير | الدفع الرقمي، حيث لا يعمل الإنترنت">
-<meta property="og:description" content="بصمة. تقريب. بيب ✅ — دفّع في أقل من ثانية، بدون إنترنت وبدون كاش.">
-<meta property="og:image" content="assets/og-image.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>أثير | الدفع اللاتلامسي بدون إنترنت — بنية تحتية وطنية يمنية</title>
+<meta name="description" content="أثير: بنية تحتية وطنية للمدفوعات اللاتلامسية تعمل بدون إنترنت. صفر تكلفة أجهزة، دفع في أقل من ثانية، أمان بمستوى مصرفي — صُنعت في اليمن وجاهزة للعالم.">
+<link rel="canonical" href="https://mutawakel-hub.github.io/atheer/">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0A1220">
 <meta property="og:type" content="website">
+<meta property="og:title" content="أثير | الدفع اللاتلامسي بدون إنترنت — بنية تحتية وطنية يمنية">
+<meta property="og:description" content="أثير: بنية تحتية وطنية للمدفوعات اللاتلامسية تعمل بدون إنترنت. صفر تكلفة أجهزة، دفع في أقل من ثانية، أمان بمستوى مصرفي — صُنعت في اليمن وجاهزة للعالم.">
+<meta property="og:image" content="https://mutawakel-hub.github.io/atheer/assets/og-image.png">
+<meta property="og:url" content="https://mutawakel-hub.github.io/atheer/">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="أثير | الدفع اللاتلامسي بدون إنترنت — بنية تحتية وطنية يمنية">
+<meta name="twitter:description" content="أثير: بنية تحتية وطنية للمدفوعات اللاتلامسية تعمل بدون إنترنت. صفر تكلفة أجهزة، دفع في أقل من ثانية، أمان بمستوى مصرفي — صُنعت في اليمن وجاهزة للعالم.">
+<meta name="twitter:image" content="https://mutawakel-hub.github.io/atheer/assets/og-image.png">
 <link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800;900&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#0A1220; --bg2:#0D1B33; --bg3:#0F2140;
-  --card:rgba(255,255,255,.045); --card2:rgba(255,255,255,.07);
-  --border:rgba(255,255,255,.09); --border2:rgba(41,182,246,.35);
-  --text:#EAF1FD; --muted:#93A5C6; --dim:#5E7195;
-  --c1:#29B6F6; --c2:#00E5CC; --green:#22C55E; --amber:#FFC542;
-  --grad:linear-gradient(135deg,#29B6F6 0%,#00E5CC 100%);
-  --radius:22px;
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Tajawal:wght@400;500;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://mutawakel-hub.github.io/atheer/#organization",
+      "name": "أثير",
+      "alternateName": "Atheer",
+      "url": "https://mutawakel-hub.github.io/atheer/",
+      "logo": "https://mutawakel-hub.github.io/atheer/assets/og-image.png",
+      "founder": { "@type": "Person", "name": "أحمد علي محمد المتوكل" },
+      "address": { "@type": "PostalAddress", "addressCountry": "YE" },
+      "sameAs": ["https://github.com/mutawakel-hub"]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Atheer",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Android",
+      "inLanguage": ["ar", "en"],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "Offline NFC contactless payments",
+        "ECDSA P-256 signing inside TEE/StrongBox",
+        "Any Android NFC phone becomes a SoftPOS",
+        "182-byte transaction token",
+        "Kotlin SDK for wallet integration",
+        "Zero-Rating telecom partnership ready"
+      ]
+    }
+  ]
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  font-family:'Tajawal',-apple-system,'Segoe UI',Tahoma,Arial,sans-serif;
-  background:var(--bg); color:var(--text); line-height:1.75;
-  overflow-x:hidden; -webkit-font-smoothing:antialiased;
-}
-/* ==== Ambient background ==== */
-.bg-orbs{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
-.bg-orbs::before{content:'';position:absolute;width:900px;height:900px;top:-420px;left:50%;transform:translateX(-50%);
-  background:radial-gradient(circle,rgba(41,182,246,.16) 0%,transparent 62%);}
-.bg-orbs::after{content:'';position:absolute;width:700px;height:700px;bottom:-380px;right:-240px;
-  background:radial-gradient(circle,rgba(0,229,204,.10) 0%,transparent 60%);}
-.bg-grid{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.35;
-  background-image:linear-gradient(rgba(147,165,198,.05) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(147,165,198,.05) 1px,transparent 1px);
-  background-size:56px 56px;
-  mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 0%,transparent 75%);
-  -webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 0%,transparent 75%);}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-.container{width:min(1140px,92%);margin-inline:auto}
-section{padding:88px 0;position:relative}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.85rem;
-  color:var(--c1);background:rgba(41,182,246,.09);border:1px solid rgba(41,182,246,.25);
-  padding:5px 16px;border-radius:99px;margin-bottom:18px;letter-spacing:.5px}
-h2{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:900;line-height:1.35;margin-bottom:14px}
-.section-sub{color:var(--muted);font-size:1.08rem;max-width:640px;margin-bottom:44px}
-.center{text-align:center}
-.center .section-sub{margin-inline:auto}
-/* ==== Buttons ==== */
-.btn{display:inline-flex;align-items:center;gap:10px;font-family:inherit;font-weight:800;font-size:1rem;
-  padding:14px 30px;border-radius:14px;cursor:pointer;border:none;transition:.25s;position:relative}
-.btn-primary{background:var(--grad);color:#04121F;box-shadow:0 8px 30px rgba(0,229,204,.3)}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(0,229,204,.42)}
-.btn-ghost{background:var(--card);color:var(--text);border:1px solid var(--border)}
-.btn-ghost:hover{background:var(--card2);border-color:var(--border2)}
-/* ==== Nav ==== */
-nav{position:fixed;top:0;right:0;left:0;z-index:100;transition:.3s;
-  background:rgba(10,18,32,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  border-bottom:1px solid transparent}
-nav.scrolled{border-bottom-color:var(--border);background:rgba(10,18,32,.85)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
-.brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:1.3rem}
-.brand img{width:38px;height:38px}
-.nav-links{display:flex;gap:26px;font-weight:700;color:var(--muted);font-size:.98rem}
-.nav-links a{transition:.2s}
-.nav-links a:hover{color:var(--text)}
-.nav-cta{background:var(--card);border:1px solid var(--border);padding:9px 18px;border-radius:11px;
-  font-weight:800;font-size:.9rem;color:var(--text);transition:.2s;font-family:inherit;cursor:pointer}
-.nav-cta:hover{border-color:var(--border2);background:var(--card2)}
-/* ==== Hero ==== */
-.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;
-  text-align:center;padding-top:110px;padding-bottom:60px;position:relative}
-.hero-badge{display:inline-flex;align-items:center;gap:9px;font-size:.88rem;font-weight:700;color:var(--muted);
-  background:var(--card);border:1px solid var(--border);padding:8px 20px;border-radius:99px;margin-bottom:30px}
-.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--green);
-  box-shadow:0 0 12px var(--green);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
-.hero-logo{width:min(300px,58vw);margin-bottom:8px;animation:floaty 5.5s ease-in-out infinite;
-  filter:drop-shadow(0 20px 55px rgba(41,182,246,.35))}
-@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
-h1{font-size:clamp(2rem,6vw,3.6rem);font-weight:900;line-height:1.3;max-width:850px;margin-bottom:20px}
-h1 .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-sub{font-size:clamp(1.05rem,2.5vw,1.3rem);color:var(--muted);max-width:620px;margin-bottom:38px}
-.hero-sub b{color:var(--text)}
-.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
-.hero-mini{margin-top:46px;display:flex;gap:26px;flex-wrap:wrap;justify-content:center;
-  color:var(--dim);font-size:.88rem;font-weight:700}
-.hero-mini span{display:flex;align-items:center;gap:7px}
-.scroll-hint{position:absolute;bottom:26px;right:50%;transform:translateX(50%);color:var(--dim);
-  font-size:1.5rem;animation:bounce 2s infinite}
-@keyframes bounce{0%,100%{transform:translateX(50%) translateY(0)}50%{transform:translateX(50%) translateY(9px)}}
-/* ==== Video ==== */
-.video-frame{max-width:820px;margin-inline:auto;border-radius:var(--radius);overflow:hidden;
-  border:1px solid var(--border);background:linear-gradient(160deg,var(--bg2),var(--bg3));
-  aspect-ratio:16/9;display:flex;flex-direction:column;justify-content:center;align-items:center;
-  gap:20px;cursor:pointer;position:relative;transition:.3s}
-.video-frame:hover{border-color:var(--border2)}
-.video-frame::before{content:'';position:absolute;inset:0;
-  background:radial-gradient(circle at 50% 42%,rgba(41,182,246,.13),transparent 55%)}
-.play-btn{width:88px;height:88px;border-radius:50%;background:var(--grad);display:flex;justify-content:center;
-  align-items:center;font-size:2rem;color:#04121F;box-shadow:0 12px 45px rgba(0,229,204,.4);
-  animation:glowpulse 2.4s infinite;position:relative;z-index:1}
-@keyframes glowpulse{0%,100%{box-shadow:0 12px 45px rgba(0,229,204,.4)}50%{box-shadow:0 12px 65px rgba(0,229,204,.65)}}
-.video-frame iframe{width:100%;height:100%;border:none;position:absolute;inset:0;z-index:3}
-.video-t{font-size:1.2rem;font-weight:800;position:relative;z-index:1}
-.video-d{color:var(--muted);font-size:.95rem;position:relative;z-index:1}
-.soon{background:rgba(255,197,66,.12);color:var(--amber);border:1px solid rgba(255,197,66,.3);
-  padding:4px 16px;border-radius:99px;font-size:.8rem;font-weight:800;position:relative;z-index:1}
-/* ==== Cards ==== */
-.cards-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
-  padding:34px 28px;transition:.3s;position:relative;overflow:hidden}
-.card:hover{transform:translateY(-6px);border-color:var(--border2);background:var(--card2)}
-.card .emo{font-size:2.6rem;display:block;margin-bottom:16px}
-.card h3{font-size:1.22rem;font-weight:900;margin-bottom:10px}
-.card p{color:var(--muted);font-size:1rem}
-.punch{margin-top:40px;background:linear-gradient(135deg,rgba(41,182,246,.09),rgba(0,229,204,.07));
-  border:1px solid var(--border2);border-radius:var(--radius);padding:26px 34px;
-  display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.punch p{font-size:1.08rem;font-weight:700;max-width:640px}
-.punch p b{color:var(--c2)}
-/* ==== Steps ==== */
-.step-num{font-size:3.4rem;font-weight:900;line-height:1;
-  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:8px}
-.step-flow{display:flex;justify-content:center;align-items:center;gap:14px;color:var(--dim);
-  font-size:1.6rem;font-weight:900;margin-top:40px;flex-wrap:wrap}
-.step-flow .arr{opacity:.6}
-/* ==== Demo / Simulation ==== */
-#demo{background:linear-gradient(180deg,transparent 0%,rgba(13,27,51,.65) 18%,rgba(13,27,51,.65) 82%,transparent 100%)}
-.sim-guide{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:34px}
-.g-step{background:var(--card);border:1px solid var(--border);border-radius:99px;padding:8px 20px;
-  font-weight:800;font-size:.92rem;color:var(--dim);transition:.3s}
-.g-step.active{color:var(--text);border-color:var(--border2);background:var(--card2)}
-.g-step.done{color:var(--green);border-color:rgba(34,197,94,.4)}
-.sim-stage{display:flex;justify-content:center;align-items:stretch;gap:0;margin-bottom:26px}
-.phone{width:250px;background:linear-gradient(170deg,#13233F,#0C1830);border:1px solid var(--border);
-  border-radius:30px;padding:16px 14px 20px;position:relative;transition:transform .6s cubic-bezier(.34,1.4,.5,1);
-  box-shadow:0 22px 60px rgba(0,0,0,.45);z-index:2}
-.phone .notch{width:86px;height:22px;background:#0A1220;border-radius:99px;margin:0 auto 14px;position:relative}
-.phone .notch::after{content:'';position:absolute;right:50%;top:7px;transform:translateX(50%);
-  width:9px;height:9px;border-radius:50%;background:#1E3A5F;box-shadow:inset 0 0 3px #2F5A8F}
-.p-head{font-size:.82rem;font-weight:800;color:var(--muted);text-align:center;margin-bottom:12px;
-  letter-spacing:.3px}
-.p-body{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-radius:20px;
-  min-height:250px;padding:20px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:14px;position:relative;overflow:hidden;text-align:center}
-.p-status{font-size:.95rem;font-weight:700;color:var(--muted);min-height:2.2em;line-height:1.6;transition:.3s}
-.p-status.ok{color:var(--green)}
-.p-status.ready{color:var(--c2)}
-.fp-btn{width:92px;height:92px;border-radius:50%;background:var(--card2);border:2px solid var(--border2);
-  display:flex;justify-content:center;align-items:center;cursor:pointer;transition:.3s;position:relative}
-.fp-btn svg{width:48px;height:48px;stroke:var(--c1);fill:none;stroke-width:1.8;stroke-linecap:round}
-.fp-btn.pulsing{animation:fppulse 1.8s infinite}
-@keyframes fppulse{0%,100%{box-shadow:0 0 0 0 rgba(41,182,246,.45)}55%{box-shadow:0 0 0 18px rgba(41,182,246,0)}}
-.fp-btn:active{transform:scale(.93)}
-.p-amount{font-size:.85rem;color:var(--dim);font-weight:700}
-.m-amount{font-size:2.3rem;font-weight:900;color:var(--text)}
-.m-amount small{font-size:.95rem;color:var(--muted);font-weight:700}
-.check-pop{font-size:3.6rem;transform:scale(0);transition:transform .5s cubic-bezier(.34,1.56,.64,1);display:none}
-.check-pop.show{display:block;transform:scale(1)}
-.phone.success{border-color:rgba(34,197,94,.55);box-shadow:0 22px 70px rgba(34,197,94,.22)}
-.approach-hint{position:absolute;bottom:9px;right:50%;transform:translateX(50%);font-size:.72rem;
-  color:var(--c2);font-weight:800;opacity:0;transition:.4s;white-space:nowrap}
-.phone.aim .app-hint{opacity:1}
-.nfc-zone{width:110px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;z-index:1}
-.nfc-waves{position:relative;width:60px;height:60px;display:flex;justify-content:center;align-items:center}
-.nfc-waves span{position:absolute;border:2px solid var(--c1);border-radius:50%;opacity:0;width:16px;height:16px}
-.nfc-waves.on span{animation:wave 1.6s infinite}
-.nfc-waves.on span:nth-child(2){animation-delay:.35s}
-.nfc-waves.on span:nth-child(3){animation-delay:.7s}
-@keyframes wave{0%{width:14px;height:14px;opacity:.9}100%{width:58px;height:58px;opacity:0}}
-.nfc-label{font-size:.72rem;font-weight:900;color:var(--dim);letter-spacing:2px}
-.nfc-zone.active .nfc-label{color:var(--c1)}
-.sim-actions{display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap}
-.sim-note{margin-top:26px;text-align:center;color:var(--muted);font-size:.95rem}
-.sim-note b{color:var(--c2)}
-#resetBtn{background:var(--card);border:1px solid var(--border);color:var(--text);
-  padding:10px 22px;border-radius:12px;font-family:inherit;font-weight:800;cursor:pointer;transition:.2s}
-#resetBtn:hover{background:var(--card2);border-color:var(--border2)}
-#txCount{color:var(--dim);font-weight:700;font-size:.88rem}
-.confetti{position:absolute;width:8px;height:8px;border-radius:2px;opacity:0;pointer-events:none}
-.confetti.fly{animation:confly 1.1s ease-out forwards}
-@keyframes confly{0%{opacity:1;transform:translate(0,0) rotate(0)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(220deg)}}
-/* ==== Stats ==== */
-.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
-.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
-  padding:36px 26px;text-align:center;transition:.3s;position:relative;overflow:hidden}
-.stat::after{content:'';position:absolute;top:0;right:0;left:0;height:3px;background:var(--grad);
-  opacity:0;transition:.3s}
-.stat:hover{transform:translateY(-6px);border-color:var(--border2)}
-.stat:hover::after{opacity:1}
-.stat .num{font-size:clamp(2.2rem,5vw,3rem);font-weight:900;line-height:1.15;
-  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.stat .lbl{font-weight:800;font-size:1.05rem;margin-top:6px}
-.stat .des{color:var(--muted);font-size:.92rem;margin-top:6px}
-.fun-bar{margin-top:34px;text-align:center;background:var(--card);border:1px dashed var(--border2);
-  border-radius:16px;padding:16px 24px;color:var(--muted);font-size:.98rem}
-.fun-bar b{color:var(--c1)}
-/* ==== Compare ==== */
-.tbl-wrap{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--border);background:var(--card)}
-table{width:100%;border-collapse:collapse;min-width:640px}
-th,td{padding:17px 18px;text-align:center;font-size:.98rem;border-bottom:1px solid var(--border)}
-th{font-weight:900;font-size:1.02rem;background:rgba(255,255,255,.03)}
-td:first-child,th:first-child{text-align:right;font-weight:800;color:var(--muted)}
-tr:last-child td{border-bottom:none}
-.col-atheer{background:rgba(0,229,204,.07);position:relative}
-th.col-atheer{color:var(--c2)}
-td.col-atheer{font-weight:800}
-.yes{color:var(--green)} .no{color:#F0566A} .mid{color:var(--amber)}
-.tbl-cap{margin-top:22px;text-align:center;color:var(--muted);font-size:.98rem}
-.tbl-cap b{color:var(--text)}
-/* ==== Partners ==== */
-.chips{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:34px}
-.chip{background:var(--card);border:1px solid var(--border);border-radius:99px;padding:12px 28px;
-  font-weight:800;font-size:1.02rem;transition:.25s}
-.chip:hover{border-color:var(--border2);background:var(--card2);transform:translateY(-3px)}
-.chip.hot{background:rgba(0,229,204,.09);border-color:var(--border2);color:var(--c2)}
-/* ==== Footer ==== */
-footer{border-top:1px solid var(--border);background:linear-gradient(180deg,transparent,rgba(13,27,51,.8));
-  padding:64px 0 30px}
-.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:44px;margin-bottom:44px}
-.f-brand img{width:190px;margin-bottom:16px}
-.f-brand p{color:var(--muted);font-size:.95rem;max-width:300px}
-.f-title{font-weight:900;font-size:1.05rem;margin-bottom:18px}
-.f-links{display:flex;flex-direction:column;gap:11px;color:var(--muted);font-size:.96rem}
-.f-links a{transition:.2s}.f-links a:hover{color:var(--c2)}
-.f-contact{display:flex;flex-direction:column;gap:12px;color:var(--muted);font-size:.96rem}
-.f-contact .row{display:flex;align-items:center;gap:11px}
-.f-contact .row a:hover{color:var(--c2)}
-.f-btns{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
-.f-btns .btn{padding:11px 20px;font-size:.9rem}
-.f-bottom{border-top:1px solid var(--border);padding-top:26px;display:flex;flex-direction:column;gap:12px;
-  text-align:center;color:var(--dim);font-size:.9rem}
-.f-expo{color:var(--muted);font-weight:700}
-.f-expo b{color:var(--c1)}
-.speed-line{display:inline-flex;align-items:center;gap:8px;background:rgba(0,229,204,.07);
-  border:1px solid rgba(0,229,204,.25);color:var(--c2);padding:7px 18px;border-radius:99px;
-  font-weight:800;font-size:.86rem}
-/* ==== Reveal on scroll ==== */
-.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .reveal{opacity:1;transform:none}
-}
-/* ==== Responsive ==== */
-@media (max-width:860px){
-  .f-grid{grid-template-columns:1fr;gap:34px;text-align:center}
-  .f-brand img{margin-inline:auto}
-  .f-links{align-items:center}
-  .f-contact{align-items:center}
-}
-@media (max-width:760px){
-  .nav-links{display:none}
-  section{padding:64px 0}
-  .sim-stage{flex-direction:column;align-items:center;gap:6px}
-  .phone{width:min(320px,88vw)}
-  .nfc-zone{width:64px;height:52px;flex-direction:row}
-  .nfc-waves{width:44px;height:44px}
-  @keyframes wave{0%{width:12px;height:12px;opacity:.9}100%{width:42px;height:42px;opacity:0}}
-  .phone.aim{transform:translateY(14px)}
-  .phone.sent{transform:translateY(34px)}
-  .phone.msent{transform:translateY(-34px)}
-}
-@media (min-width:761px){
-  .phone.aim{transform:translateX(-18px)}
-  .phone.sent{transform:translateX(-44px)}
-  .phone.msent{transform:translateX(44px)}
-}
-</style>
+</script>
 </head>
 <body>
-<div class="bg-orbs"></div>
-<div class="bg-grid"></div>
+<a class="skip-link" href="#hero" data-i18n="a11y.skip">تخطَّ إلى المحتوى</a>
 
-<!-- ===== NAV ===== -->
-<nav id="nav">
-  <div class="container nav-in">
-    <a href="#top" class="brand" aria-label="أثير - الرئيسية">
-      <img src="assets/logo-icon.webp" alt="شعار أثير" width="38" height="38">
-      <span>أثير</span>
-    </a>
-    <div class="nav-links">
-      <a href="#problem">المشكلة</a>
-      <a href="#how">كيف يعمل</a>
-      <a href="#demo">جرّبها بنفسك</a>
-      <a href="#stats">الأرقام</a>
-      <a href="#compare">المقارنة</a>
-    </div>
-    <a class="nav-cta" href="assets/Atheer-Booklet.pdf" download>📄 الوثيقة PDF</a>
-  </div>
-</nav>
-
-<!-- ===== HERO ===== -->
-<header class="hero" id="top">
+<header class="site-header" id="top">
   <div class="container">
-    <div class="hero-badge"><span class="dot"></span> معرض بروج التقني SMART-EX 2026 · جناح جامعة العلوم والتكنولوجيا</div>
-    <img class="hero-logo" src="assets/logo-icon.webp" alt="أثير" width="440" height="440" fetchpriority="high">
-    <h1>الدفع الرقمي،<br>حيث <span class="grad-text">لا يعمل الإنترنت</span>.</h1>
-    <p class="hero-sub">بصمة. تقريب. <b>بيب ✅</b><br>دفّع في <b>أقل من ثانية</b> — بدون إنترنت، بدون كاش، وبدون انتظار.</p>
-    <div class="hero-ctas">
-      <a class="btn btn-primary" href="#demo">🎮 جرّب الدفع بنفسك</a>
-      <a class="btn btn-ghost" href="#video">▶ شاهد الفيديو</a>
-    </div>
-    <div class="hero-mini">
-      <span>📴 يعمل بدون إنترنت</span><span>⚡ أقل من ثانية</span><span>🔒 أمان بنكي</span><span>🇾🇪 صنع يمني</span>
-    </div>
+    <nav class="nav" aria-label="Atheer">
+      <a class="nav-logo" href="#top">
+        <img src="assets/logo-icon.webp" alt="شعار أثير" width="40" height="40" aria-label="شعار أثير" data-i18n-aria="brand.logo">
+        <span data-i18n="brand.name">أثير</span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="#problem" data-i18n="nav.problem">المشكلة</a>
+        <a class="nav-link" href="#how" data-i18n="nav.how">كيف يعمل</a>
+        <a class="nav-link" href="#features" data-i18n="nav.features">المزايا</a>
+        <a class="nav-link" href="#economics" data-i18n="nav.economics">النموذج الاقتصادي</a>
+        <a class="nav-link" href="#partners" data-i18n="nav.partners">الشركاء</a>
+        <a class="nav-link" href="#contact" data-i18n="nav.contact">تواصل</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn lang-toggle" id="lang-toggle" type="button" aria-label="تبديل اللغة" data-i18n-aria="a11y.lang">EN</button>
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="تبديل المظهر" data-i18n-aria="a11y.theme">☀️</button>
+      </div>
+      <button class="nav-burger" id="nav-burger" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="burger-line" aria-hidden="true"></span>
+        <span class="burger-line" aria-hidden="true"></span>
+        <span class="burger-line" aria-hidden="true"></span>
+        <span class="sr-only" data-i18n="a11y.burger">القائمة</span>
+      </button>
+    </nav>
   </div>
-  <div class="scroll-hint" aria-hidden="true">↓</div>
 </header>
-
-<!-- ===== VIDEO ===== -->
-<section id="video">
-  <div class="container center reveal">
-    <span class="eyebrow">🎬 الفيديو التعريفي</span>
-    <h2>شاهد أثير في 60 ثانية</h2>
-    <p class="section-sub">المشكلة، الفكرة، والنتيجة — كلها في دقيقة واحدة تختصر كل شيء.</p>
-    <div class="video-frame" id="videoFrame" role="button" tabindex="0" aria-label="تشغيل الفيديو التعريفي">
-      <div class="play-btn">▶</div>
-      <div class="video-t">الفيديو التعريفي لأثير</div>
-      <div class="video-d">المشكلة → الحل → التجربة الحية</div>
-      <span class="soon">قريباً — يُرفع الفيديو قبل المعرض</span>
-    </div>
+<div class="mobile-menu" id="mobile-menu">
+  <nav>
+    <a class="nav-link" href="#problem" data-i18n="nav.problem">المشكلة</a>
+    <a class="nav-link" href="#how" data-i18n="nav.how">كيف يعمل</a>
+    <a class="nav-link" href="#features" data-i18n="nav.features">المزايا</a>
+    <a class="nav-link" href="#economics" data-i18n="nav.economics">النموذج الاقتصادي</a>
+    <a class="nav-link" href="#partners" data-i18n="nav.partners">الشركاء</a>
+    <a class="nav-link" href="#contact" data-i18n="nav.contact">تواصل</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="icon-btn lang-toggle" id="lang-toggle-m" type="button" aria-label="تبديل اللغة" data-i18n-aria="a11y.lang">EN</button>
+    <button class="icon-btn theme-toggle" id="theme-toggle-m" type="button" aria-label="تبديل المظهر" data-i18n-aria="a11y.theme">☀️</button>
   </div>
-</section>
+</div>
 
-<!-- ===== PROBLEM ===== -->
-<section id="problem">
-  <div class="container reveal">
-    <span class="eyebron" style="display:none"></span>
-    <span class="eyebrow">⚠️ المشكلة</span>
-    <h2>النت مقطوع…<br>والموقف واقف.</h2>
-    <p class="section-sub">كلنا عشنا هذه المواقف. في كل مرة تنقطع الشبكة أو تضعف، يتوقف الدفع الرقمي بالكامل — ويرجع الجميع للكاش والفكة.</p>
-    <div class="cards-3">
-      <div class="card">
-        <span class="emo">🚌</span>
-        <h3>الباص وقت الذروة</h3>
-        <p>التطبيق يعلّق على «جاري التحميل…»، السائق يبحث عن فكة لورقة الألف، والطابور خلفك يطول والزحمة تزيد.</p>
-      </div>
-      <div class="card">
-        <span class="emo">🏪</span>
-        <h3>بقالة الحارة</h3>
-        <p>رصيد بياناتك صفر، وواي فاي البقالة مقطوع. تضطر تُحرِج نفسك وتطلب كلمة السر… أو ترجع بكرة.</p>
-      </div>
-      <div class="card">
-        <span class="emo">🧺</span>
-        <h3>بسطة الشارع</h3>
-        <p>البائع المتجول لا يملك جهاز دفع ولا ميزانية له — فيبقى اقتصاد شوارع كامل خارج النظام الرقمي.</p>
-      </div>
-    </div>
-    <div class="punch">
-      <p>النتيجة؟ <b>ملايين المعاملات يومياً</b> ترتد للكاش — المحفظة تخسر، التاجر يتأخر، وأنت تتأخر معه.</p>
-      <a class="btn btn-primary" href="#how">طيب، الحل؟ 👇</a>
-    </div>
-  </div>
-</section>
-<!-- ===== HOW IT WORKS ===== -->
-<section id="how">
-  <div class="container center reveal">
-    <span class="eyebrow">✨ الحل</span>
-    <h2>ثلاث خطوات.<br><span class="grad-text" style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">أقل من ثانية.</span></h2>
-    <p class="section-sub">أثير يجعل الدفع الرقمي يعمل بدون إنترنت عند الدافع نهائياً — بنفس راحة الكاش وسرعة لمسة واحدة.</p>
-    <div class="cards-3" style="text-align:right">
-      <div class="card">
-        <div class="step-num">①</div>
-        <h3>ضع بصمتك 🔒</h3>
-        <p>افتح تطبيق محفظتك المعتاد وضع إصبعك. خلال لحظة تظهر لك: «جاهز للدفع».</p>
-      </div>
-      <div class="card">
-        <div class="step-num">②</div>
-        <h3>قرّب هاتفك 📱</h3>
-        <p>مرّر هاتفك بجوار هاتف التاجر — لمسة واحدة قريبة المدى، بدون إنترنت وبدون رموز تحقق.</p>
-      </div>
-      <div class="card">
-        <div class="step-num">③</div>
-        <h3>بيب! تم ✅</h3>
-        <p>صوت تأكيد واحد وينتهي الأمر — المبلغ وصل حساب التاجر فوراً. حتى وضع الطيران يعمل 🛩</p>
-      </div>
-    </div>
-    <div class="punch" style="justify-content:center;text-align:center">
-      <p>💡 <b>الزبون لا يحتاج إنترنت أبداً</b> — لا واي فاي، لا بيانات، لا شبكة. توقيع العملية يتم داخل هاتفه بأمان مصرفي كامل، وهاتف التاجر يُكمل الباقي.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== DEMO / SIMULATION ===== -->
-<section id="demo">
-  <div class="container center reveal">
-    <span class="eyebrow">🎮 تجربة حية</span>
-    <h2>جرّبها بنفسك الآن</h2>
-    <p class="section-sub">هذه محاكاة مبسطة لما يحدث في الواقع — من بصمتك إلى وصول المبلغ للتاجر.</p>
-
-    <div class="sim-guide">
-      <span class="g-step" id="g1">1. اضغط البصمة</span>
-      <span class="g-step" id="g2">2. قرّب الهاتفين</span>
-      <span class="g-step" id="g3">3. استلم الدفعة</span>
-    </div>
-
-    <div class="sim-stage" id="simStage">
-      <!-- Customer phone -->
-      <div class="phone" id="phoneC" aria-label="هاتف الزبون">
-        <div class="notch"></div>
-        <div class="p-head">📱 محفظتك</div>
-        <div class="p-body">
-          <div class="p-status" id="statusC">اضغط على البصمة للبدء</div>
-          <button class="fp-btn pulsing" id="fpBtn" aria-label="محاكاة بصمة الإصبع">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 11c3.5 0 6 2.5 6 6"/>
-              <path d="M12 15c-1.9 0-3 1.2-3 3v1"/>
-              <path d="M12 7c5.2 0 9 3.9 9 9.2"/>
-              <path d="M12 3C5.9 3 1 7.9 1 13.9V17"/>
-              <path d="M6 16c0-4 2-6.5 6-6.5s6 2.5 6 6.5"/>
-              <path d="M8 19c0-2.7 1.6-4 4-4s4 1.3 4 4"/>
-            </svg>
-          </button>
-          <div class="p-amount">المبلغ: 200 ريال</div>
-          <span class="approach-hint" id="appHint">👆 اضغط هنا لمحاكاة التقريب</span>
-        </div>
-      </div>
-      <!-- NFC zone -->
-      <div class="nfc-zone" id="nfcZone" aria-hidden="true">
-        <div class="nfc-waves" id="nfcWaves"><span></span><span></span><span></span></div>
-        <div class="nfc-label">NFC</div>
-      </div>
-      <!-- Merchant phone -->
-      <div class="phone" id="phoneM" aria-label="هاتف التاجر">
-        <div class="notch"></div>
-        <div class="p-head">🏪 أثير · نقطة بيع التاجر</div>
-        <div class="p-body">
-          <div class="m-amount">200 <small>ريال</small></div>
-          <div class="p-status" id="statusM">بانتظار الدفع…</div>
-          <div class="check-pop" id="checkM">✅</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="sim-actions">
-      <button id="resetBtn" type="button">🔁 إعادة التجربة</button>
-      <span id="txCount">جاهز لأول معاملة تجريبية</span>
-    </div>
-    <p class="sim-note">في الواقع: الخطوات الثلاث تحدث في <b>أقل من ثانية</b> — وبدون إنترنت عند الزبون إطلاقاً.</p>
-  </div>
-</section>
-
-<!-- ===== STATS ===== -->
-<section id="stats">
-  <div class="container center reveal">
-    <span class="eyebrow">📊 الأرقام</span>
-    <h2>أرقام تتكلم عن نفسها</h2>
-    <p class="section-sub">بدون تعقيد وبدون تفاصيل — هذه النتيجة النهائية التي سيعيشها المستخدم.</p>
-    <div class="stats-grid">
-      <div class="stat">
-        <div class="num">&lt; 1 ثانية</div>
-        <div class="lbl">زمن الدفعة كاملة</div>
-        <div class="des">من البصمة حتى وصول المبلغ للتاجر</div>
-      </div>
-      <div class="stat">
-        <div class="num">100%</div>
-        <div class="lbl">بدون إنترنت عند الدفع</div>
-        <div class="des">لا بيانات، لا واي فاي — حتى وضع الطيران يعمل</div>
-      </div>
-      <div class="stat">
-        <div class="num">$0</div>
-        <div class="lbl">تكلفة على التاجر</div>
-        <div class="des">لا أجهزة ولا رسوم تأسيس — هاتفه نفسه نقطة البيع</div>
-      </div>
-      <div class="stat">
-        <div class="num">🏦 أمان بنكي</div>
-        <div class="lbl">حماية بمستوى البطاقات العالمية</div>
-        <div class="des">سرّك المالي لا يغادر هاتفك أبداً</div>
-      </div>
-    </div>
-    <div class="fun-bar">🤓 <b>طريفة</b> تُروى في الجناح: معاملة كاملة تنتقل بحجم <b>أصغر من رسالة SMS واحدة</b>.</div>
-  </div>
-</section>
-
-<!-- ===== COMPARE ===== -->
-<section id="compare">
-  <div class="container reveal">
-    <div class="center">
-      <span class="eyebrow">⚖️ المقارنة</span>
-      <h2>بكل بساطة: لماذا أثير؟</h2>
-      <p class="section-sub">مقارنة مباشرة بين خيارات الدفع في واقعنا اليمني — بدون مجاملة.</p>
-    </div>
-    <div class="tbl-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>💵 الكاش</th>
-            <th>📱 المحافظ الحالية (QR)</th>
-            <th class="col-atheer">🌀 أثير</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>يحتاج إنترنت عند الدفع؟</td>
-            <td><span class="no">❌ لا</span></td>
-            <td><span class="yes">✅ دائماً — من الطرفين</span></td>
-            <td class="col-atheer"><span class="no">❌ نهائياً</span></td>
-          </tr>
-          <tr>
-            <td>سرعة إتمام الدفعة</td>
-            <td><span class="mid">~30 ثانية + الفكة</span></td>
-            <td><span class="mid">10 – 30 ثانية</span></td>
-            <td class="col-atheer"><span class="yes">⚡ أقل من ثانية</span></td>
-          </tr>
-          <tr>
-            <td>مشكلة «الفكة» والنقد التالف</td>
-            <td><span class="no">😫 يومياً</span></td>
-            <td><span class="yes">✅ لا</span></td>
-            <td class="col-atheer"><span class="yes">✅ لا</span></td>
-          </tr>
-          <tr>
-            <td>سجل رقمي للمعاملات</td>
-            <td><span class="no">❌ لا يوجد</span></td>
-            <td><span class="yes">✅ كامل</span></td>
-            <td class="col-atheer"><span class="yes">✅ كامل</span></td>
-          </tr>
-          <tr>
-            <td>تكلفة بدء التاجر</td>
-            <td>—</td>
-            <td><span class="mid">تعتمد على الجهاز والشبكة</span></td>
-            <td class="col-atheer"><span class="yes">$0 — هاتفه فقط</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="tbl-cap">أثير يجمع <b>راحة الكاش</b> (لا إنترنت عند الدافع) و<b>أمان البطاقات العالمية</b> و<b>سرعة اللمسة الواحدة</b> — في حلٍّ واحد مصمّم للواقع اليمني.</p>
-  </div>
-</section>
-
-<!-- ===== PARTNERS ===== -->
-<section id="partners">
-  <div class="container center reveal">
-    <span class="eyebrow">🤝 الشراكة</span>
-    <h2>لا ننافس محفظتك…<br>نضاعف قوتها.</h2>
-    <p class="section-sub">أثير ليس محفظة إضافية — إنه بنية تحتية تُدمج داخل المحافظ القائمة. محفظتك تبقى محفظتك، وتكتسب قدرة الدفع بدون إنترنت.</p>
-    <div class="chips">
-      <span class="chip">💰 فلوسك</span>
-      <span class="chip">💳 كاش</span>
-      <span class="chip">📱 جوالي</span>
-      <span class="chip">💵 M-Floos</span>
-      <span class="chip hot">✨ محفظتك القادمة؟</span>
-    </div>
-    <div class="hero-ctas">
-      <a class="btn btn-primary" href="mailto:ahmedali.mtw@gmail.com?subject=شراكة%20مع%20منظومة%20أثير">للشركاء والاستثمار — تواصل معنا</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer>
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
   <div class="container">
-    <div class="f-grid">
-      <div class="f-brand">
-        <img src="assets/logo-white.webp" alt="أثير — Atheer" width="190" loading="lazy">
-        <p>منظومة يمنية تجعل الدفع الرقمي الالتلامسي يعمل بدون إنترنت — بنية تحتية وطنية تُدمج في المحافظ القائمة.</p>
-      </div>
-      <div>
-        <div class="f-title">روابط سريعة</div>
-        <div class="f-links">
-          <a href="#problem">المشكلة</a>
-          <a href="#how">كيف يعمل أثير</a>
-          <a href="#demo">جرّب الدفع بنفسك</a>
-          <a href="#stats">الأرقام</a>
-          <a href="#compare">المقارنة</a>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="hero-badge" data-i18n="hero.badge">بنية تحتية وطنية للمدفوعات اللاتلامسية • صُنع في اليمن 🇾🇪</span>
+        <h1 class="hero-title">
+          <span data-i18n="hero.title">أثير: الدفع اللاتلامسي</span>
+          <span class="gradient-text" data-i18n="hero.titleGrad">بدون إنترنت</span>
+        </h1>
+        <p class="hero-sub" data-i18n="hero.sub">حل مصمم للواقع اليمني... جاهز للعالم. ادفع ببصمتك وتقريب هاتفك في أقل من ثانية — حتى عندما تنقطع الشبكة تماماً.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#how" data-i18n="hero.cta1">شاهد العرض الحي</a>
+          <a class="btn btn-accent" href="#contact" data-i18n="hero.cta2">اطلب العرض التقديمي</a>
+          <a class="btn btn-ghost" href="#download" data-i18n="hero.cta3">حمّل التطبيق التجريبي</a>
+        </div>
+        <div class="trust-bar">
+          <div class="trust-item"><span class="trust-dot" aria-hidden="true"></span><span data-i18n="hero.trust1">منشور ويعمل فعلياً</span></div>
+          <div class="trust-item"><span class="trust-dot" aria-hidden="true"></span><span data-i18n="hero.trust2">SDK جاهز للدمج</span></div>
+          <div class="trust-item"><span class="trust-dot" aria-hidden="true"></span><span data-i18n="hero.trust3">نموذج عمل مربح</span></div>
         </div>
       </div>
-      <div>
-        <div class="f-title">تواصل معنا</div>
-        <div class="f-contact">
-          <div class="row">👤 أحمد علي المتوكل — مطوّر منظومة أثير</div>
-          <div class="row">📞 <a href="tel:+967775052259" dir="ltr">+967 775 052 259</a></div>
-          <div class="row">✉️ <a href="mailto:ahmedali.mtw@gmail.com">ahmedali.mtw@gmail.com</a></div>
-        </div>
-        <div class="f-btns">
-          <a class="btn btn-primary" href="assets/Atheer-Booklet.pdf" download>📄 الوثيقة الكاملة PDF</a>
+      <div class="hero-media">
+        <div class="video-card">
+          <div class="video-facade" style="background-image:url('assets/og-image.png');background-size:cover;background-position:center">
+            <button class="video-play" type="button" aria-label="تشغيل الفيديو التعريفي" data-i18n-aria="a11y.playVideo">
+              <span aria-hidden="true">▶</span>
+              <span class="sr-only" data-i18n="a11y.playVideo">تشغيل الفيديو التعريفي</span>
+            </button>
+          </div>
+          <div class="video-frame" id="video-frame" style="display:none"></div>
+          <p class="video-note" data-i18n="hero.videoNote">الفيديو التعريفي — 90 ثانية تشرح كل شيء</p>
         </div>
       </div>
     </div>
-    <div class="f-bottom">
-      <div class="f-expo">🎯 يُعرض ضمن جناح <b>جامعة العلوم والتكنولوجيا</b> · معرض بروج التقني <b>SMART-EX 2026</b></div>
-      <div><span class="speed-line">⚡ هذا الموقع مصمم ليعمل على أضعف شبكة — تماماً كأثير</span></div>
-      <div>© 2026 أحمد علي المتوكل — منظومة أثير · صُنع في اليمن 🇾🇪</div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section class="section section-alt" id="problem">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="section-title" data-i18n="problem.title">الإنترنت ينقطع... والدفع يتوقف</h2>
+      <p class="section-sub" data-i18n="problem.sub">أكثر من 5 ملايين يمني باتوا يستخدمون المحافظ الإلكترونية، لكن كل عملية دفع تتطلب إنترنتاً من الطرفين — وفي اليمن، الشبكة ليست مضمونة أبداً.</p>
     </div>
+    <div class="scenario-tabs reveal" role="tablist">
+      <button class="tab-btn active" type="button" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true" data-i18n="problem.tab1">🚌 في الباص</button>
+      <button class="tab-btn" type="button" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1" data-i18n="problem.tab2">🏪 في البقالة</button>
+      <button class="tab-btn" type="button" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1" data-i18n="problem.tab3">🧺 في السوق الشعبي</button>
+    </div>
+    <div class="scenario-panel active" id="panel-1" role="tabpanel" aria-labelledby="tab-1">
+      <div class="sceno-card">
+        <span class="sceno-icon" aria-hidden="true">🚌</span>
+        <h3 class="sceno-title" data-i18n="problem.sc1.title">الشبكة تختفي بين الأحياء</h3>
+        <p class="sceno-text" data-i18n="problem.sc1.text">تفتح تطبيق محفظتك لتدفع أجرة الرحلة... فتنتظر وتنتظر، ثم يفشل الدفع. تبحث عن ورقة نقدية لم تعد تحملها أصلاً.</p>
+      </div>
+    </div>
+    <div class="scenario-panel" id="panel-2" role="tabpanel" aria-labelledby="tab-2" aria-hidden="true">
+      <div class="sceno-card">
+        <span class="sceno-icon" aria-hidden="true">🏪</span>
+        <h3 class="sceno-title" data-i18n="problem.sc2.title">طابور ينتظر رمزاً يُحمَّل</h3>
+        <p class="sceno-text" data-i18n="problem.sc2.text">طابور طويل خلفك، ورمز QR يرفض أن يظهر. التاجر يعتذر: «الشبكة ضعيفة اليوم». الدفع الرقمي تحوّل من راحة إلى عبء.</p>
+      </div>
+    </div>
+    <div class="scenario-panel" id="panel-3" role="tabpanel" aria-labelledby="tab-3" aria-hidden="true">
+      <div class="sceno-card">
+        <span class="sceno-icon" aria-hidden="true">🧺</span>
+        <h3 class="sceno-title" data-i18n="problem.sc3.title">تاجر بلا جهاز نقاط بيع</h3>
+        <p class="sceno-text" data-i18n="problem.sc3.text">جهاز POS يكلّف التاجر الصغير 200–500 دولار — مبلغ يستحيل توفيره. النتيجة: أسواق كاملة تعمل نقداً فقط، بكل مخاطرها.</p>
+      </div>
+    </div>
+    <div class="compare reveal">
+      <div class="compare-col bad">
+        <h3 class="compare-head" data-i18n="problem.compare.badHead">الطريقة التقليدية</h3>
+        <ul class="compare-list">
+          <li data-i18n="problem.compare.bad1">إنترنت إلزامي من الطرفين في كل عملية</li>
+          <li data-i18n="problem.compare.bad2">أجهزة POS بـ 200–500 دولار للتاجر</li>
+          <li data-i18n="problem.compare.bad3">الدفع يفشل مع أول انقطاع</li>
+          <li data-i18n="problem.compare.bad4">صيانة ودعم فني واستثمار مقدم</li>
+        </ul>
+      </div>
+      <div class="compare-col good">
+        <h3 class="compare-head" data-i18n="problem.compare.goodHead">مع أثير</h3>
+        <ul class="compare-list">
+          <li data-i18n="problem.compare.good1">يعمل أوفلاين 100% بعد تسجيل أولي واحد</li>
+          <li data-i18n="problem.compare.good2">أي هاتف NFC يصبح نقطة بيع مجاناً</li>
+          <li data-i18n="problem.compare.good3">دفع ناجح في أقل من ثانية</li>
+          <li data-i18n="problem.compare.good4">تحقق مركزي آمن دون تدخل الزبون</li>
+        </ul>
+      </div>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card reveal">
+        <div class="stat-value" data-count="0" data-prefix="$" data-i18n="problem.stat1.value">$0</div>
+        <div class="stat-label" data-i18n="problem.stat1.label">تكلفة أجهزة التاجر</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-value" data-count="100" data-suffix="%" data-i18n="problem.stat2.value">100%</div>
+        <div class="stat-label" data-i18n="problem.stat2.label">أوفلاين للزبون</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-value" data-i18n="problem.stat3.value">&lt;1 ثانية</div>
+        <div class="stat-label" data-i18n="problem.stat3.label">لإتمام الدفع</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW / SIMULATION ============ -->
+<section class="section" id="how">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="section-title" data-i18n="how.title">كيف يعمل أثير؟ أبسط مما تتخيل</h2>
+      <p class="section-sub" data-i18n="how.sub">بصمة → تقريب → تم! ثلاث خطوات في أقل من ثانية، دون أي إنترنت من طرف الزبون.</p>
+    </div>
+    <div class="flow-demo" id="flow-demo" data-state="idle">
+      <div class="demo-stage">
+        <div class="phone-mock">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-screen">
+            <p class="scr-status" id="scr-status-c" data-i18n="how.scr.idle">ضع بصمتك للبدء</p>
+            <p class="scr-amount">1,500 ﷼</p>
+            <button class="scr-btn-main" id="scr-btn-main" type="button" aria-label="ابدأ الدفع التجريبي" data-i18n-aria="how.demo.btn">👆</button>
+            <div class="success-ring"><span class="scr-check" aria-hidden="true">✓</span></div>
+            <p class="scr-token">182 bytes</p>
+          </div>
+        </div>
+        <div class="wave" aria-hidden="true">
+          <span class="wave-arc"></span>
+          <span class="wave-arc"></span>
+          <span class="wave-arc"></span>
+        </div>
+        <div class="pos-mock">
+          <div class="pos-screen">
+            <p class="scr-status" id="scr-status-m" data-i18n="how.pos.idle">بانتظار الدفع…</p>
+            <p class="scr-amount">1,500 ﷼</p>
+            <div class="scr-spinner" aria-hidden="true"></div>
+            <span class="scr-check" aria-hidden="true">✓</span>
+            <p class="scr-token">182 bytes</p>
+          </div>
+        </div>
+      </div>
+      <div class="demo-controls">
+        <div class="demo-toggle">
+          <span data-i18n="how.demo.netLabel">إنترنت الزبون:</span>
+          <button class="toggle-track" id="net-toggle" type="button" data-on="false" aria-pressed="false" aria-label="تبديل إنترنت الزبون" data-i18n-aria="a11y.netToggle"><span class="toggle-knob" aria-hidden="true"></span></button>
+          <span id="net-state" data-i18n="how.demo.netOff">متوقف (جرّب الدفع رغم ذلك!)</span>
+        </div>
+        <button class="demo-btn btn btn-primary" id="demo-btn" type="button" data-i18n="how.demo.btn">ابدأ الدفع التجريبي</button>
+        <p class="demo-status" id="demo-status" aria-live="polite" data-i18n="how.demo.status.idle">جاهز؟ اضغط الزر ولو كان الإنترنت متوقفاً</p>
+      </div>
+      <div class="confetti" aria-hidden="true">
+        <span class="confetti-piece"></span>
+        <span class="confetti-piece"></span>
+        <span class="confetti-piece"></span>
+        <span class="confetti-piece"></span>
+        <span class="confetti-piece"></span>
+        <span class="confetti-piece"></span>
+        <span class="confetti-piece"></span>
+        <span class="confetti-piece"></span>
+        <span class="confetti-piece"></span>
+        <span class="confetti-piece"></span>
+        <span class="confetti-piece"></span>
+        <span class="confetti-piece"></span>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step-card reveal">
+        <span class="step-num">1</span>
+        <span class="step-icon" aria-hidden="true">👆</span>
+        <h3 class="step-title" data-i18n="how.step1.title">ضع بصمتك</h3>
+        <p class="step-text" data-i18n="how.step1.text">افتح تطبيق محفظتك وضع بصمتك؛ يُفتح مفتاح التوقيع الرقمي لمدة 60 ثانية.</p>
+      </div>
+      <div class="step-card reveal">
+        <span class="step-num">2</span>
+        <span class="step-icon" aria-hidden="true">📲</span>
+        <h3 class="step-title" data-i18n="how.step2.title">قرّب هاتفك</h3>
+        <p class="step-text" data-i18n="how.step2.text">قرّب هاتفك من جهاز التاجر؛ يُوقَّع الدفع رقمياً داخل شريحة أمان هاتفك ويُرسل عبر NFC — دون أي إنترنت.</p>
+      </div>
+      <div class="step-card reveal">
+        <span class="step-num">3</span>
+        <span class="step-icon" aria-hidden="true">🔔</span>
+        <h3 class="step-title" data-i18n="how.step3.title">بيب! تم الدفع ✅</h3>
+        <p class="step-text" data-i18n="how.step3.text">صوت واحد يخبرك أن الدفع تم. التحقق يجري مركزياً لاحقاً عند توفر الشبكة لدى التاجر — والزبون لا يحتاجها أبداً.</p>
+      </div>
+    </div>
+    <div class="tech-details reveal">
+      <details>
+        <summary data-i18n="how.tech.summary">للتقنيين: نظرة أعمق (اختياري) ▾</summary>
+        <div class="tech-grid">
+          <div class="tech-item">
+            <h4 class="tech-item-title" data-i18n="how.tech.i1.title">توقيع ECDSA P-256</h4>
+            <p class="tech-item-text" data-i18n="how.tech.i1.text">يُنشأ التوقيع داخل شريحة أمان الجهاز (TEE/StrongBox) — المستوى ذاته المستخدم في بطاقات الدفع العالمية.</p>
+          </div>
+          <div class="tech-item">
+            <h4 class="tech-item-title" data-i18n="how.tech.i2.title">توكن بحجم 182 بايت</h4>
+            <p class="tech-item-text" data-i18n="how.tech.i2.text">ترميز TLV مضغوط ضمن حد بروتوكول APDU البالغ 255 بايت — مناسب تماماً لاتصال NFC قصير.</p>
+          </div>
+          <div class="tech-item">
+            <h4 class="tech-item-title" data-i18n="how.tech.i3.title">حماية من إعادة التشغيل</h4>
+            <p class="tech-item-text" data-i18n="how.tech.i3.text">عدّاد متزايد في كل عملية يمنع استخدام التوكن نفسه مرتين مهما حدث.</p>
+          </div>
+          <div class="tech-item">
+            <h4 class="tech-item-title" data-i18n="how.tech.i4.title">تحقق مركزي بأربعة اختبارات</h4>
+            <p class="tech-item-text" data-i18n="how.tech.i4.text">المقسم المركزي يفحص كل عملية بأربعة اختبارات أمنية متسلسلة قبل تنفيذ الخصم.</p>
+          </div>
+          <div class="tech-item">
+            <h4 class="tech-item-title" data-i18n="how.tech.i5.title">SDK جاهز للدمج</h4>
+            <p class="tech-item-text" data-i18n="how.tech.i5.text">مكتبة Kotlin ‎(.aar) من 14 ملفاً رئيسياً — تُدمج في أي تطبيق محفظة بأسطر قليلة.</p>
+          </div>
+          <div class="tech-item">
+            <h4 class="tech-item-title" data-i18n="how.tech.i6.title">مفتوح على البنية الوطنية</h4>
+            <p class="tech-item-text" data-i18n="how.tech.i6.text">جاهز للربط مع أي محفظة إلكترونية أو مقسم وطني (Switch) قائم — أثير بنية تُضاف، لا منافس يأتي.</p>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+<!-- ============ FEATURES ============ -->
+<section class="section section-alt" id="features">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="section-title" data-i18n="features.title">لماذا أثير مختلف؟</h2>
+      <p class="section-sub" data-i18n="features.sub">ليس تطبيقاً آخر يضاف إلى هاتفك — بل بنية تحتية تمنح المحافظ القائمة قدرة جديدة كلياً.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <span class="feature-icon" aria-hidden="true">📱</span>
+        <h3 class="feature-title" data-i18n="features.f1.title">صفر تكلفة للأجهزة</h3>
+        <p class="feature-text" data-i18n="features.f1.text">تقنية SoftPOS تحوّل أي هاتف أندرويد يدعم NFC إلى نقطة بيع كاملة — بلا أجهزة مخصصة، بلا صيانة، بلا استثمار مقدم.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon" aria-hidden="true">✈️</span>
+        <h3 class="feature-title" data-i18n="features.f2.title">100% أوفلاين للزبون</h3>
+        <p class="feature-text" data-i18n="features.f2.text">لا واي فاي، لا بيانات، لا شبكة خلوية. تسجيل أولي واحد عند التفعيل، ثم الدفع يعمل في أي مكان وزمان.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon" aria-hidden="true">🔒</span>
+        <h3 class="feature-title" data-i18n="features.f3.title">أمان بمستوى مصرفي</h3>
+        <p class="feature-text" data-i18n="features.f3.text">7 طبقات حماية ممتدة من شريحة الجهاز حتى الخصم الذري، بتشفير يوازي بطاقات الدفع العالمية.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon" aria-hidden="true">🧩</span>
+        <h3 class="feature-title" data-i18n="features.f4.title">تكامل بسيط</h3>
+        <p class="feature-text" data-i18n="features.f4.text">SDK جاهز يُدمج في تطبيق محفظتك بأسطر قليلة — فلوسك تبقى فلوسك، وكاش تبقى كاش، مع قدرة جديدة تماماً.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon" aria-hidden="true">🤝</span>
+        <h3 class="feature-title" data-i18n="features.f5.title">نموذج Zero-Rating جاهز</h3>
+        <p class="feature-text" data-i18n="features.f5.text">شراكة رابحة مع مشغلي الاتصالات: باقات بيانات بالجملة للمحافظ، وتصفير كامل لتكلفة بيانات المعاملات.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ECONOMICS ============ -->
+<section class="section" id="economics">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="section-title" data-i18n="econ.title">النموذج الاقتصادي: الجميع يكسب</h2>
+      <p class="section-sub" data-i18n="econ.sub">أثير ليس مجرد تقنية — بل نموذج أعمال يجعل كل طرف في السلسلة رابحاً.</p>
+    </div>
+    <div class="econ-compare reveal">
+      <div class="econ-col bad">
+        <h3 class="ecol-head" data-i18n="econ.bad.head">تغطية تقليدية لـ 10,000 تاجر</h3>
+        <p class="ecol-price" data-i18n="econ.bad.price">$2–5 مليون</p>
+        <ul class="ecol-list">
+          <li data-i18n="econ.bad.l1">أجهزة POS فقط — قبل الصيانة والاستبدال</li>
+          <li data-i18n="econ.bad.l2">انتشار بطيء ومحصور بالمدن الرئيسية</li>
+          <li data-i18n="econ.bad.l3">تكلفة بيانات 0.34% من إيرادات MDR</li>
+        </ul>
+      </div>
+      <div class="econ-col good">
+        <h3 class="ecol-head" data-i18n="econ.good.head">التغطية مع أثير</h3>
+        <p class="ecol-price gradient-text" data-i18n="econ.good.price">$0</p>
+        <ul class="ecol-list">
+          <li data-i18n="econ.good.l1">التاجر يستخدم هاتفه نفسه — SoftPOS</li>
+          <li data-i18n="econ.good.l2">Zero-CAPEX: لا تكاليف تأسيسية إطلاقاً</li>
+          <li data-i18n="econ.good.l3">انتشار فوري أينما وُجد هاتف يدعم NFC</li>
+          <li data-i18n="econ.good.l4">Zero-Rating يصفّر كلفة البيانات كلياً</li>
+        </ul>
+      </div>
+    </div>
+    <div class="stake-grid">
+      <div class="stake-card reveal">
+        <h3 class="stake-head"><span aria-hidden="true">👤</span> <span data-i18n="econ.stake1.head">الزبون</span></h3>
+        <ul class="stake-list">
+          <li data-i18n="econ.stake1.l1">يدفع في أي وقت ومكان — حتى بلا شبكة، دون حمل نقد</li>
+        </ul>
+      </div>
+      <div class="stake-card reveal">
+        <h3 class="stake-head"><span aria-hidden="true">🏪</span> <span data-i18n="econ.stake2.head">التاجر</span></h3>
+        <ul class="stake-list">
+          <li data-i18n="econ.stake2.l1">نقطة بيع مجانية على هاتفه وتحصيل رقمي أوسع</li>
+        </ul>
+      </div>
+      <div class="stake-card reveal">
+        <h3 class="stake-head"><span aria-hidden="true">💳</span> <span data-i18n="econ.stake3.head">المحفظة</span></h3>
+        <ul class="stake-list">
+          <li data-i18n="econ.stake3.l1">وصول لأسواق ريفية كانت «خارج التغطية» ونمو بلا استثمار أجهزة</li>
+        </ul>
+      </div>
+      <div class="stake-card reveal">
+        <h3 class="stake-head"><span aria-hidden="true">📡</span> <span data-i18n="econ.stake4.head">مشغّل الاتصالات</span></h3>
+        <ul class="stake-list">
+          <li data-i18n="econ.stake4.l1">إيرادات B2B جديدة من باقات البيانات بالجملة — Win-Win</li>
+        </ul>
+      </div>
+    </div>
+    <div class="region-row reveal">
+      <strong data-i18n="econ.regions.label">التوسع الإقليمي — جاهز للتصدير:</strong>
+      <span class="region-chip">
+        <span class="region-name" data-i18n="econ.region1.name">🇸🇩 السودان</span>
+        <span class="region-status" data-i18n="econ.region1.status">جاهز تماماً — محفظة شريكة فقط</span>
+      </span>
+      <span class="region-chip">
+        <span class="region-name" data-i18n="econ.region2.name">🇸🇴 الصومال</span>
+        <span class="region-status" data-i18n="econ.region2.status">جاهز تماماً — نفس البنية</span>
+      </span>
+      <span class="region-chip">
+        <span class="region-name" data-i18n="econ.region3.name">🇦🇫 أفغانستان</span>
+        <span class="region-status" data-i18n="econ.region3.status">جاهز — تعديلات توطين طفيفة</span>
+      </span>
+    </div>
+    <div class="partner-cta reveal">
+      <p data-i18n="econ.cta.text">فرص الشراكة والاستثمار مفتوحة — انضم إلى بنية تحتية تبدأ من اليمن وتنطلق إلى المنطقة.</p>
+      <a class="btn btn-accent" href="#contact" data-i18n="econ.cta.btn">تحدث معنا</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ READINESS ============ -->
+<section class="section section-alt" id="readiness">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="section-title" data-i18n="ready.title">منشور ويعمل فعلياً — ليس فكرة على ورق</h2>
+      <p class="section-sub" data-i18n="ready.sub">كل مكون من مكونات أثير مبني ومنشور ويجري تشغيله واختباره فعلياً اليوم.</p>
+    </div>
+    <div class="status-grid">
+      <div class="status-card reveal">
+        <span class="status-chip live"><span class="trust-dot" aria-hidden="true"></span><span data-i18n="ready.s1.chip">يعمل الآن</span></span>
+        <h3 class="status-title" data-i18n="ready.s1.title">Atheer Switch</h3>
+        <p class="status-text"><span data-i18n="ready.s1.text">المعالج المركزي (Go) يعمل على</span> <a href="https://api.atheer-suite.me" target="_blank" rel="noopener">api.atheer-suite.me</a><span data-i18n="ready.s1.after"> — عقل التحقق والتنفيذ.</span></p>
+      </div>
+      <div class="status-card reveal">
+        <span class="status-chip live"><span class="trust-dot" aria-hidden="true"></span><span data-i18n="ready.s2.chip">يعمل الآن</span></span>
+        <h3 class="status-title" data-i18n="ready.s2.title">لوحة التحكم العربية</h3>
+        <p class="status-text"><span data-i18n="ready.s2.text">إدارة المحافظ الشريكة وسجل المعاملات والفلترة — على</span> <a href="https://api.atheer-suite.me/admin/" target="_blank" rel="noopener">api.atheer-suite.me/admin/</a><span data-i18n="ready.s2.after"> داخل نفس الرابط.</span></p>
+      </div>
+      <div class="status-card reveal">
+        <span class="status-chip live"><span class="trust-dot" aria-hidden="true"></span><span data-i18n="ready.s3.chip">يعمل الآن</span></span>
+        <h3 class="status-title" data-i18n="ready.s3.title">سيرفر محفظة تجريبي</h3>
+        <p class="status-text"><span data-i18n="ready.s3.text">25 نقطة نهاية API تحاكي محفظة حقيقية مرتبطة بالمقسم — على</span> <a href="https://mahfaz-server.onrender.com" target="_blank" rel="noopener">mahfaz-server.onrender.com</a><span data-i18n="ready.s3.after">.</span></p>
+      </div>
+      <div class="status-card reveal">
+        <span class="status-chip"><span class="trust-dot" aria-hidden="true"></span><span data-i18n="ready.s4.chip">جاهز</span></span>
+        <h3 class="status-title" data-i18n="ready.s4.title">تطبيق تجريبي (Kotlin)</h3>
+        <p class="status-text" data-i18n="ready.s4.text">تطبيق أندرويد أصلي متكامل يعرض تجربة الدفع كاملة من طرفي الزبون والتاجر.</p>
+      </div>
+      <div class="status-card reveal">
+        <span class="status-chip"><span class="trust-dot" aria-hidden="true"></span><span data-i18n="ready.s5.chip">جاهز</span></span>
+        <h3 class="status-title" data-i18n="ready.s5.title">SDK للدمج</h3>
+        <p class="status-text" data-i18n="ready.s5.text">مكتبة Kotlin ‎(.aar) من 14 ملفاً رئيسياً جاهزة للدمج في تطبيقات المحافظ.</p>
+      </div>
+    </div>
+    <div class="doc-links reveal">
+      <a class="doc-link" href="assets/Atheer-Booklet.pdf" download data-i18n="ready.docs.d1">📄 الكتيب التقديمي (PDF)</a>
+      <a class="doc-link" href="#contact" data-i18n="ready.docs.d2">🔐 التوثيق الأمني — 66 صفحة</a>
+      <a class="doc-link" href="#contact" data-i18n="ready.docs.d3">⚙️ مواصفات OpenAPI كاملة</a>
+    </div>
+    <div class="download-block reveal" id="download">
+      <h3 data-i18n="ready.download.title">حمّل التطبيق التجريبي</h3>
+      <p data-i18n="ready.download.text">سجّل بريدك الإلكتروني وسنرسل لك رابط التطبيق التجريبي فور جاهزيته للنشر العام.</p>
+      <form class="download-form" id="download-form" novalidate>
+        <input class="form-input" id="dl-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="بريدك الإلكتروني" data-i18n-ph="ready.download.placeholder" aria-label="البريد الإلكتروني" data-i18n-aria="a11y.email">
+        <button class="btn btn-primary" type="submit" data-i18n="ready.download.btn">حمّل التطبيق التجريبي</button>
+      </form>
+      <div class="download-success" id="download-success" hidden><span data-i18n="ready.download.success">تم التسجيل بنجاح! سنراسلك على بريدك قريباً ✅</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTNERS ============ -->
+<section class="section" id="partners">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="section-title" data-i18n="partners.title">للشركاء والمطورين: ابدأ في 4 خطوات</h2>
+      <p class="section-sub" data-i18n="partners.sub">حزمة تكامل تُولَّد تلقائياً من لوحة التحكم — من التسجيل إلى أول دفعة أوفلاين.</p>
+    </div>
+    <div class="sdk-steps">
+      <div class="sdk-step reveal">
+        <span class="sdk-num">1</span>
+        <h3 class="sdk-title" data-i18n="partners.step1.title">سجّل محفظتك</h3>
+        <p class="sdk-text" data-i18n="partners.step1.text">من لوحة التحكم مباشرة: أضف بيانات محفظتك وبيئة تشغيلها.</p>
+      </div>
+      <div class="sdk-step reveal">
+        <span class="sdk-num">2</span>
+        <h3 class="sdk-title" data-i18n="partners.step2.title">استلم حزمة الربط</h3>
+        <p class="sdk-text" data-i18n="partners.step2.text">تُولَّد تلقائياً: مفتاح API فريد + كود Kotlin جاهز + مواصفات OpenAPI + دليل أمن الربط.</p>
+      </div>
+      <div class="sdk-step reveal">
+        <span class="sdk-num">3</span>
+        <h3 class="sdk-title" data-i18n="partners.step3.title">ادمج الـ SDK</h3>
+        <p class="sdk-text" data-i18n="partners.step3.text">بأسطر قليلة من الكود يصبح تطبيقك جاهزاً للدفع اللاتلامسي أوفلاين.</p>
+      </div>
+      <div class="sdk-step reveal">
+        <span class="sdk-num">4</span>
+        <h3 class="sdk-title" data-i18n="partners.step4.title">فعّلها لمستخدميك</h3>
+        <p class="sdk-text" data-i18n="partners.step4.text">خاصية الدفع تظهر في تطبيقك: تسجيل أولي واحد، ثم الدفع يعمل بلا إنترنت.</p>
+      </div>
+    </div>
+    <div class="pkg-grid">
+      <div class="pkg-card reveal">
+        <span class="pkg-icon" aria-hidden="true">🔑</span>
+        <h3 class="pkg-title" data-i18n="partners.pkg1.title">API Key فريد</h3>
+        <p class="pkg-text" data-i18n="partners.pkg1.text">مفتاح مخصص لمحفظتك</p>
+      </div>
+      <div class="pkg-card reveal">
+        <span class="pkg-icon" aria-hidden="true">💻</span>
+        <h3 class="pkg-title" data-i18n="partners.pkg2.title">كود Kotlin جاهز</h3>
+        <p class="pkg-text" data-i18n="partners.pkg2.text">للنسخ والدمج المباشر</p>
+      </div>
+      <div class="pkg-card reveal">
+        <span class="pkg-icon" aria-hidden="true">📋</span>
+        <h3 class="pkg-title" data-i18n="partners.pkg3.title">مواصفات OpenAPI</h3>
+        <p class="pkg-text" data-i18n="partners.pkg3.text">توثيق كامل للنقاط</p>
+      </div>
+      <div class="pkg-card reveal">
+        <span class="pkg-icon" aria-hidden="true">🛡️</span>
+        <h3 class="pkg-title" data-i18n="partners.pkg4.title">دليل أمن الربط</h3>
+        <p class="pkg-text" data-i18n="partners.pkg4.text">أفضل الممارسات جاهزة</p>
+      </div>
+    </div>
+    <div class="partners-cta reveal">
+      <p data-i18n="partners.cta.text">جاهز للانضمام إلى منظومة أثير؟</p>
+      <a class="btn btn-primary" href="#contact" data-i18n="partners.cta.btn">اطلب شراكة</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="section-title" data-i18n="contact.title">تواصل معنا</h2>
+      <p class="section-sub" data-i18n="contact.sub">سنكون سعداء بالإجابة عن أسئلتك، أو مناقشة الشراكة والاستثمار، أو تقديم عرض تقديمي كامل.</p>
+    </div>
+    <div class="contact-grid">
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="cf-name" data-i18n="contact.form.name">الاسم الكامل</label>
+          <input class="form-input" id="cf-name" name="name" type="text" required autocomplete="name" placeholder="مثال: أحمد محمد" data-i18n-ph="contact.form.namePh">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cf-email" data-i18n="contact.form.email">البريد الإلكتروني</label>
+          <input class="form-input" id="cf-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="name@example.com" data-i18n-ph="contact.form.emailPh">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cf-topic" data-i18n="contact.form.topic">نوع الطلب</label>
+          <select class="form-select" id="cf-topic" name="topic" required>
+            <option value="general" data-i18n="contact.topic.o1">استفسار عام</option>
+            <option value="partnership" data-i18n="contact.topic.o2">شراكة محفظة</option>
+            <option value="investment" data-i18n="contact.topic.o3">فرصة استثمار</option>
+            <option value="deck" data-i18n="contact.topic.o4">طلب العرض التقديمي</option>
+            <option value="support" data-i18n="contact.topic.o5">دعم فني</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cf-msg" data-i18n="contact.form.message">الرسالة</label>
+          <textarea class="form-textarea" id="cf-msg" name="message" rows="5" required placeholder="اكتب رسالتك هنا..." data-i18n-ph="contact.form.messagePh"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit" data-i18n="contact.form.submit">أرسل الرسالة</button>
+        <div class="form-success" id="contact-success" hidden><span data-i18n="contact.form.success">تم إرسال رسالتك بنجاح — سنرد عليك خلال 48 ساعة ✅</span></div>
+      </form>
+      <div class="contact-info">
+        <div class="contact-line">
+          <span class="contact-label" data-i18n="contact.info.email.label">البريد</span>
+          <a class="contact-value" href="mailto:ahmedali.mtw@gmail.com" data-i18n="contact.info.email.value">ahmedali.mtw@gmail.com</a>
+        </div>
+        <div class="contact-line">
+          <span class="contact-label" data-i18n="contact.info.phone.label">الهاتف</span>
+          <a class="contact-value" href="tel:+967775052259" dir="ltr" data-i18n="contact.info.phone.value">+967 775 052 259</a>
+        </div>
+        <div class="contact-line">
+          <span class="contact-label" data-i18n="contact.info.uni.label">الجهة</span>
+          <span class="contact-value" data-i18n="contact.info.uni.value">جامعة العلوم والتكنولوجيا — اليمن</span>
+        </div>
+        <div class="contact-line">
+          <span class="contact-label" data-i18n="contact.info.expo.label">المناسبة</span>
+          <span class="contact-value" data-i18n="contact.info.expo.value">معرض SMART-EX 2026 — جناح الجامعة</span>
+        </div>
+        <div class="social-links">
+          <a class="social-link" href="https://github.com/mutawakel-hub" target="_blank" rel="noopener" aria-label="صفحة GitHub" data-i18n-aria="contact.social.github">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="#top">
+          <img src="assets/logo-icon.webp" alt="شعار أثير" width="40" height="40" aria-label="شعار أثير" data-i18n-aria="brand.logo">
+          <span data-i18n="brand.name">أثير</span>
+        </a>
+        <p class="footer-desc" data-i18n="footer.desc">بنية تحتية وطنية للمدفوعات اللاتلامسية بدون إنترنت — تُدمج في المحافظ القائمة وتنطلق من اليمن إلى المنطقة.</p>
+      </div>
+      <nav class="footer-links">
+        <a class="nav-link" href="#problem" data-i18n="nav.problem">المشكلة</a>
+        <a class="nav-link" href="#how" data-i18n="nav.how">كيف يعمل</a>
+        <a class="nav-link" href="#features" data-i18n="nav.features">المزايا</a>
+        <a class="nav-link" href="#economics" data-i18n="nav.economics">النموذج الاقتصادي</a>
+        <a class="nav-link" href="#partners" data-i18n="nav.partners">الشركاء</a>
+        <a class="nav-link" href="#contact" data-i18n="nav.contact">تواصل</a>
+      </nav>
+      <div class="doc-links">
+        <a class="doc-link" href="assets/Atheer-Booklet.pdf" download data-i18n="ready.docs.d1">📄 الكتيب التقديمي (PDF)</a>
+      </div>
+    </div>
+    <p class="footer-note" data-i18n="footer.note">⚡ هذا الموقع مصمم ليعمل بسرعة حتى على أضعف الشبكات — تماماً مثل أثير.</p>
+    <p class="footer-copy" data-i18n="footer.copy">© 2026 أحمد علي محمد المتوكل — صُنع في اليمن 🇾🇪 • يُقدَّم ضمن جناح جامعة العلوم والتكنولوجيا في معرض SMART-EX 2026</p>
   </div>
 </footer>
 
-<script>
-/* ===== Nav shadow ===== */
-const nav = document.getElementById('nav');
-addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 30), {passive:true});
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-/* ===== Reveal on scroll ===== */
-const io = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-}), {threshold:.12});
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-/* ===== Video embed (YouTube) =====
-   🔧 لربط الفيديو التعريفي: ضع معرّف فيديو يوتيوب هنا فقط، مثال:
-   const YT_ID = 'dQw4w9WgXcQ';
-   بمجرد وضع المعرّف، تتحول بطاقة الفيديو تلقائياً إلى مشغل يوتيوب عند الضغط. */
-const YT_ID = '';
-const vframe = document.getElementById('videoFrame');
-function playVideo(){
-  if (YT_ID) {
-    vframe.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/'+YT_ID+'?autoplay=1&rel=0" title="الفيديو التعريفي لأثير" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>';
-  } else {
-    const s = vframe.querySelector('.soon');
-    const old = s.textContent;
-    s.textContent = '⏳ سيُربط رابط الفيديو قريباً — تابعنا في المعرض!';
-    setTimeout(()=> s.textContent = old, 2600);
-  }
-}
-vframe.addEventListener('click', playVideo);
-vframe.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' ') { e.preventDefault(); playVideo(); } });
-
-/* ===== Payment simulation ===== */
-const fpBtn = document.getElementById('fpBtn');
-const phoneC = document.getElementById('phoneC');
-const phoneM = document.getElementById('phoneM');
-const statusC = document.getElementById('statusC');
-const statusM = document.getElementById('statusM');
-const checkM = document.getElementById('checkM');
-const appHint = document.getElementById('appHint');
-const nfcWaves = document.getElementById('nfcWaves');
-const nfcZone = document.getElementById('nfcZone');
-const resetBtn = document.getElementById('resetBtn');
-const txCount = document.getElementById('txCount');
-const g1 = document.getElementById('g1'), g2 = document.getElementById('g2'), g3 = document.getElementById('g3');
-let stage = 0, tx = 0;
-
-/* POS beep via Web Audio (no audio files) */
-let AC;
-function beep(){
-  try{
-    AC = AC || new (window.AudioContext || window.webkitAudioContext)();
-    [[1318,0],[1568,.14]].forEach(([f,d])=>{
-      const o = AC.createOscillator(), g = AC.createGain();
-      o.type='sine'; o.frequency.value=f;
-      g.gain.setValueAtTime(.0001, AC.currentTime+d);
-      g.gain.exponentialRampToValueAtTime(.28, AC.currentTime+d+.02);
-      g.gain.exponentialRampToValueAtTime(.0001, AC.currentTime+d+.13);
-      o.connect(g).connect(AC.destination);
-      o.start(AC.currentTime+d); o.stop(AC.currentTime+d+.15);
-    });
-  }catch(e){}
-}
-
-function confetti(host){
-  const colors = ['#29B6F6','#00E5CC','#22C55E','#FFC542','#7C8FFF'];
-  for(let i=0;i<16;i++){
-    const c = document.createElement('span');
-    c.className='confetti';
-    c.style.background = colors[i%colors.length];
-    c.style.right = (35+Math.random()*30)+'%';
-    c.style.top = '42%';
-    c.style.setProperty('--dx', (Math.random()*160-80)+'px');
-    c.style.setProperty('--dy', (Math.random()*-130-30)+'px');
-    host.appendChild(c);
-    requestAnimationFrame(()=> c.classList.add('fly'));
-    setTimeout(()=> c.remove(), 1200);
-  }
-}
-
-function setGuide(){
-  [g1,g2,g3].forEach((g,i)=>{
-    const done = (i < 2) ? (stage > i) : (stage >= 2);
-    const active = !done && (stage === i);
-    g.classList.toggle('done', done);
-    g.classList.toggle('active', active);
-  });
-}
-
-fpBtn.addEventListener('click', e => {
-  e.stopPropagation();
-  if(stage !== 0) return;
-  stage = 1;
-  fpBtn.classList.remove('pulsing');
-  fpBtn.style.borderColor = 'rgba(34,197,94,.6)';
-  statusC.textContent = '✅ جاهز للدفع';
-  statusC.className = 'p-status ready';
-  phoneC.classList.add('aim');
-  appHint.style.opacity = '1';
-  nfcWaves.classList.add('on');
-  nfcZone.classList.add('active');
-  setGuide();
-});
-
-phoneC.addEventListener('click', () => {
-  if(stage !== 1) return;
-  stage = 2;
-  appHint.style.opacity = '0';
-  phoneC.classList.remove('aim');
-  phoneC.classList.add('sent');
-  phoneM.classList.add('msent');
-  nfcWaves.querySelectorAll('span').forEach(s=> s.style.animationDuration='.7s');
-  beep();
-  setTimeout(()=>{
-    phoneM.classList.add('success');
-    statusM.textContent = '✅ تم استلام 200 ريال';
-    statusM.className = 'p-status ok';
-    statusC.textContent = '✅ تم الدفع — بدون إنترنت';
-    statusC.className = 'p-status ok';
-    checkM.classList.add('show');
-    confetti(phoneM.querySelector('.p-body'));
-    tx++;
-    txCount.textContent = 'معاملة تجريبية #' + tx + (tx>=3 ? ' — أصبحت محترفاً 🎉' : '');
-    setGuide();
-    /* on mobile (stacked layout) bring the merchant result into view */
-    if (matchMedia('(max-width:760px)').matches) {
-      setTimeout(()=> phoneM.scrollIntoView({behavior:'smooth', block:'center'}), 350);
-    }
-  }, 550);
-});
-
-resetBtn.addEventListener('click', () => {
-  stage = 0;
-  fpBtn.classList.add('pulsing');
-  fpBtn.style.borderColor = '';
-  statusC.textContent = 'اضغط على البصمة للبدء';
-  statusC.className = 'p-status';
-  statusM.textContent = 'بانتظار الدفع…';
-  statusM.className = 'p-status';
-  checkM.classList.remove('show');
-  ['aim','sent'].forEach(c=> phoneC.classList.remove(c));
-  phoneM.classList.remove('msent','success');
-  nfcWaves.classList.remove('on');
-  nfcWaves.querySelectorAll('span').forEach(s=> s.style.animationDuration='');
-  nfcZone.classList.remove('active');
-  appHint.style.opacity = '0';
-  if(tx===0) txCount.textContent = 'جاهز لأول معاملة تجريبية';
-  setGuide();
-});
-
-/* init */
-setGuide();
-</script>
+<script src="js/i18n.js" defer></script>
+<script src="js/app.js" defer></script>
 </body>
 </html>
+
